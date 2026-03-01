@@ -7,9 +7,16 @@
     "vscode": {
       "extensions":[
         "ms-python.python",
-        "ms-python.vscode-pylance"
+        "ms-python.vscode-pylance",
+        "mhutchie.git-graph"
       ]
-    }
-  },
-  "postStartCommand": "pip install -r requirements.txt"
+    },
+  "settings": {
+        "python.createEnvironment.trigger": "off",
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.terminal.activateEnvironment": false,
+        "extensions.ignoreRecommendations": true
+  }
+ },
+ "postStartCommand": "pip install -r requirements.txt"
 }
