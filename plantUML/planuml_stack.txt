@@ -1,0 +1,28 @@
+@startuml
+!theme plain
+
+node "Windows OS (Host)" {
+    component "Visual Studio Code" as vscode
+    component "DBeaver" as dbeaver
+    
+    node "WSL 2 VM (Windows Subsystem for Linux)" as wsl {
+        node "Docker Desktop Engine" {
+            folder "Local Directory (.)\n(Shared to WSL)" as local_dir
+            database "postgres-data\n(Named Volume)" as pg_vol
+            
+            package "Docker Compose Stack" {
+                component "app container\n(application:latest)" as app
+                component "db container\n(postgres:18-trixie)" as db
+            }
+        }
+    }
+}
+
+vscode ..> app : " DevContainers Extension"
+dbeaver ..> db : " localhost:5432"
+app --> db : " depends_on"
+
+local_dir <--> app : " Mounted to /workspace"
+db <--> pg_vol : " Mounted to /var/lib/postgresql"
+
+@enduml

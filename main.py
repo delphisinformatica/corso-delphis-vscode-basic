@@ -8,9 +8,9 @@ try:
         host="database",
         database="devdb",
         user="devuser",
-        password="devpassword"
-    )
+        password="devpassword")
     print("Successfully connected to the PostgreSQL database!")
     conn.close()
+    
 except Exception as e:
-    print(f"Database connection failed: {e}")
+    print(f"non potete andare in bagno: {e}")

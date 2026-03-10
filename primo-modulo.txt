@@ -1,0 +1,32 @@
+    5. Fondamenti di sistemi e componenti - 20 ore (5,5,1,5,1,5*)
+    5h. aula
+    - Componenti hardware fondamentali: CPU, memoria, dispositivi di input/output, reti.
+    - Tipologie di software: sistema operativo, middleware, applicativi.
+    - Introduzione agli ambienti di programmazione, IDE, WSL2, LSP
+    - Laboratorio: installare e configurare un ambiente di sviluppo personale:
+    -  compilatore del linguaggio scelto e framework backend e frontend
+    - IDE - VSCode
+    - Client SQL - Squirrel SQL o similare
+
+    5h. FAD
+    - Architettura di un sistema informatico complesso: client, server, rete e servizi.
+    - Panoramica sulle architetture distribuite e cloud.
+    - Concetti di interoperabilità, compatibilità e modularità.
+    - Laboratorio: installare e configurare un ambiente di sviluppo personale:
+    -  compilatore del linguaggio scelto e framework backend e frontend
+    - IDE - VSCode
+    - Client SQL - Squirrel SQL o similare
+
+    1h. Aula
+    - Introduzione ai sistemi embedded e IoT (cenni).
+
+    5h: Aula
+    - Laboratorio: analisi di un’architettura aziendale e mappatura dei componenti.
+    - Concetti di virtualizzazione e containerizzazione (VMware, Docker).
+
+    1h. Aula
+    - Tipi di interfaccia: API, driver, connettori, librerie condivise.
+
+    3h. Aula
+    - Database - MySQL o PostrgeSQL
+    - Identificazione dei colli di bottiglia nei sistemi integrati.
