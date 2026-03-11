@@ -1,0 +1,10 @@
+indirizzo_ip:porta
+
+192.168.x.x
+10.x.x.x
+172.29.x.x
+
+porte TCP: 0-65536
+porte UDP: 0-65536
+
+
