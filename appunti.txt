@@ -7,4 +7,5 @@ indirizzo_ip:porta
 porte TCP: 0-65536
 porte UDP: 0-65536
 
+modifica su main
 
