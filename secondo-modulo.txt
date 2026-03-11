@@ -1,0 +1,18 @@
+    . Concetti di automazione e script di installazione (Bash, PowerShell, YAML).
+    . Gestione dei servizi e dei processi di sistema (systemd, task manager, services.msc).
+    . Integrazione hardware: driver, firmware, configurazione di rete e periferiche.
+    . Virtualizzazione e container: differenze, vantaggi e strumenti principali.
+
+
+    . Installazione e configurazione di moduli software (es. pacchetti, librerie, framework).
+
+    • Tipi di dati primitivi, variabili, costanti, espressioni e operatori.
+
+    • Strutture di controllo (sequenza, selezione, iterazione).
+    • Introduzione al debugging logico: errori sintattici, logici e di runtime.
+
+    . Gestione delle dipendenze e compatibilità tra versioni (package manager: pip, npm, Maven, NuGet).
+    . Configurazione di ambienti multipiattaforma (Windows, Linux, macOS).
+    . Integrazione continua (CI) e distribuzione continua (CD): Jenkins, GitHub Actions.
+    . Gestione delle versioni di sistema e rollback.
+    . Laboratorio pratico: installazione e integrazione di un web server e database (es. Apache + MySQL)
