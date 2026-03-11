@@ -16,3 +16,6 @@
     . Integrazione continua (CI) e distribuzione continua (CD): Jenkins, GitHub Actions.
     . Gestione delle versioni di sistema e rollback.
     . Laboratorio pratico: installazione e integrazione di un web server e database (es. Apache + MySQL)
+
+
+modifcato ulteriormente
