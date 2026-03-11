@@ -13,4 +13,4 @@ try:
     conn.close()
     
 except Exception as e:
-    print(f"non potete andare in bagno: {e}")
+    print(f"non potete andare in bagno, troppi caffè: {e}")
