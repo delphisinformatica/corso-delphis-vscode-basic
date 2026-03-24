@@ -8,6 +8,8 @@ RUN rm -f /etc/apache2/sites-enabled/000-default.conf
 
 COPY apache/virtualhost0.conf /etc/apache2/sites-enabled/virtualhost0.conf
 COPY apache/http/index.html /var/www/html/index.html
+COPY apache/http/script.js  /var/www/html/script.js
+COPY apache/http/favicon.ico /var/www/html/favicon.ico
 
 COPY apache/entrypoint.sh /usr/local/bin/entrypoint.sh
 
