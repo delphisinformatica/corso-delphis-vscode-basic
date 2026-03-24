@@ -1,0 +1,17 @@
+FROM python:3.14-slim-trixie
+
+RUN apt-get update && apt-get install -y libpq-dev gcc iputils-ping dnsutils git apache2 iproute2 && apt-get clean
+
+RUN sed -i 's/Listen\ 80/Listen\ 8080/' /etc/apache2/ports.conf
+
+COPY apache/entrypoint.sh /usr/local/bin/entrypoint.sh
+
+RUN chmod +x /usr/local/bin/entrypoint.sh
+
+WORKDIR /workspace
+
+#COPY requirements.txt .
+#RUN pip install --no-cache-dir -r requirements.txt
+
+# Keep the container running infinitely so VS Code can connect to it
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]

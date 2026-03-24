@@ -1,18 +1,4 @@
 services:
-  app:
-    image: python_application:latest
-    container_name: python_application
-    build: 
-      context: .
-      dockerfile: Dockerfile-python
-    ports:
-      - "8080:8080"
-    volumes:
-      - .:/workspace:cached
-    command: sleep infinity
-    depends_on:
-      - db
-
   db:
     image: postgres:18-trixie
     container_name: database
@@ -25,6 +11,32 @@ services:
       - "5432:5432"
     volumes:
       - postgres-data:/var/lib/postgresql
+
+  apache:
+    image: apache_application:latest
+    container_name: apache_application
+    build: 
+      context: .
+      dockerfile: Dockerfile-apache
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/workspace:cached
+    command: sleep infinity
+    depends_on:
+      - db
+
+  app:
+    image: python_application:latest
+    container_name: python_application
+    build: 
+      context: .
+      dockerfile: Dockerfile-python
+    volumes:
+      - .:/workspace:cached
+    command: sleep infinity
+    depends_on:
+      - db
 
 volumes:
   postgres-data:

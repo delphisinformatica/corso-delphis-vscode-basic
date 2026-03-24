@@ -1,0 +1,20 @@
+{
+  "name": "Corso delphis",
+  "dockerComposeFile": "../../python-docker-compose.yml",
+  "service": "apache",
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "extensions":[
+        "mhutchie.git-graph"
+      ]
+    },
+  "settings": {
+        "python.createEnvironment.trigger": "off",
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.terminal.activateEnvironment": false,
+        "extensions.ignoreRecommendations": true
+  }
+ },
+ "postStartCommand": "bash"
+}
