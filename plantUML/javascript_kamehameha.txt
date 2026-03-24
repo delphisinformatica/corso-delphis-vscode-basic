@@ -1,0 +1,48 @@
+@startuml
+skinparam ParticipantPadding 20
+skinparam BoxPadding 10
+
+actor User
+participant "Browser (DOM/Engine)" as Browser
+participant "Apache Server" as Apache
+participant "Tenor CDN" as External
+
+== Initial Page Load ==
+
+User -> Browser: Request URL
+Browser -> Apache: GET 127.0.0.1:8080/
+Apache --> Browser: 200 OK (HTML Content -> index.html)
+
+note over Browser: Parses HTML\nFinds <script src="script.js">
+Browser -> Apache: GET /script.js
+Apache --> Browser: 200 OK (JS Code)
+
+== User Interaction ==
+
+User -> Browser: Clicks #attack-btn
+activate Browser
+
+note right of Browser: Executes fireKamehameha()
+Browser -> External: GET /future-alec-alec.gif
+External --> Browser: 200 OK (Image Data)
+
+Browser -> Browser: Update DOM (Show GIF)
+Browser -> Browser: Update CSS (Add .shake class)
+Browser -> Browser: Set Timeout (3000ms)
+
+... 3 Seconds Elapse ...
+
+Browser -> Browser: Update Text ("HAAAAAAAAA!")
+Browser -> Browser: Set Timeout (1000ms)
+
+... 1 Second Elapse ...
+
+Browser -> Browser: Set Opacity 0 (Fade out)
+Browser -> Browser: Set Timeout (500ms)
+
+... 0.5 Seconds Elapse ...
+
+Browser -> Browser: DOM remove(#doomed-text)
+deactivate Browser
+
+@enduml
