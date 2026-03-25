@@ -14,7 +14,7 @@ services:
 
   apache:
     image: apache_application:latest
-    container_name: apache_application
+    container_name: apache_application_giulio
     build: 
       context: .
       dockerfile: Dockerfile-apache
