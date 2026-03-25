@@ -1,6 +1,6 @@
 {
   "name": "Corso delphis",
-  "dockerComposeFile": "../../python-docker-compose.yml",
+  "dockerComposeFile": "../../apache-docker-compose-sviluppo.yml",
   "service": "apache",
   "workspaceFolder": "/workspace",
   "customizations": {
