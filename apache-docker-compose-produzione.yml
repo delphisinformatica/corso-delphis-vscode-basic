@@ -19,7 +19,7 @@ services:
       context: .
       dockerfile: Dockerfile-apache-produzione
     ports:
-      - "8080:8080"
+      - "80:80"
     volumes:
       - .:/workspace:cached
     command: sleep infinity
