@@ -24,9 +24,6 @@ class ApiSingleton:
     def __init__(self):
         # 2. __init__ sets up the variables.
         # Note: __init__ runs every time someone types ApiSingleton(),
-        # so we check if 'base_url' already exists before setting it!
-        #if not hasattr(self, 'base_url'):
-            #print("Setting up the base_url for the first time...")
         self.base_url = "https://jsonplaceholder.typicode.com"
             
     def get_all_users(self):
