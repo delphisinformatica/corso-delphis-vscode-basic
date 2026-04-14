@@ -16,9 +16,6 @@ class ApiSingleton:
             print("Creating the API connection for the FIRST time...")
             cls._instance = super().__new__(cls)
             
-            # We can set up our base URL here once
-            #cls._instance.base_url = "https://jsonplaceholder.typicode.com"
-            
         return cls._instance
     
     def __init__(self):
@@ -31,6 +28,13 @@ class ApiSingleton:
         url = f"{self.base_url}/users"
         response = requests.get(url)
         return response.json()
+
+    def get_one_user(self, user_index: int):
+        print("scrivere una funzione che estrae un singolo user con index number")
+        print(f"{user_index}")
+        
+    def get_last_user(self):
+        print("scrivere una funzione che estrae l'ultimo user")
 
 # ==========================================
 # USAGE
@@ -54,7 +58,10 @@ else:
 
 print("\n--- Fetching Data ---")
 # Because they are the same, we can use either one to get our data
-users = client_one.get_all_users()
+users1 = client_one.get_all_users()
+users2 = client_two.get_all_users()
 
 # Print just the first user's name
-print(f"First user's name: {users[0]['name']}")
+print(users1)
+print(f"user name: {users1[0]['name']}")
+#print(f"user name: {users2[0]['name']}")

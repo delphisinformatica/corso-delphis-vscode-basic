@@ -6,15 +6,15 @@ class ApiRequestBuilder:
     A simple Builder class to construct an API request step-by-step.
     Returning 'self' in the methods allows us to chain them together!
     """
-    def __init__(self, base_url):
+    def __init__(self, base_url: str):
         self.url = base_url
         
-    def add_endpoint(self, endpoint):
+    def add_endpoint(self, endpoint: str):
         # 1 Adds the specific path to our base URL
         self.url = f"{self.url}/{endpoint}"
         return self 
         
-    def add_user_id(self, user_id):
+    def add_user_id(self, user_id: str):
         # 2 Adds a specific user ID to the URL
         self.url = f"{self.url}/{user_id}"
         return self
@@ -34,11 +34,11 @@ class ApiRequestBuilder:
 print("--- Testing Builder Pattern ---")
 
 builder1 = ApiRequestBuilder("https://jsonplaceholder.typicode.com")
-user_data = builder1.add_endpoint("users").add_user_id(3).execute()
+user_data = builder1.add_endpoint("users").add_user_id(0).execute()
 
 #print("\nUser Details from builder1:")
 print(builder1)
-print(json.dumps(user_data, indent=4))
+#print(json.dumps(user_data, indent=4))
 
 
 # 1. Start with the base URL
