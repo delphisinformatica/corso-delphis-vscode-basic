@@ -27,14 +27,25 @@ async def root():
     return {"message": "hello from the python course"}
 
 @app.post("/add_todo")
+#uvicorn fa:
+# json_dal_client_http = leggi_dal_curl()
+# chiamata = add_todo(json_dal_client_http)
 async def add_todo(todo: Todo):
-    todo_id = str(uuid.uuid4())
+    #todo_id = str(uuid.uuid4())
     
-    with open(CSV_FILE, mode='a', newline='') as f:
-        writer = csv.writer(f)
-        writer.writerow([todo_id, todo.title, todo.description, todo.priority, todo.state])
+    print(type(todo))
+    print(todo.title)
+    print(type(todo.title))
+    print(todo.priority)
+    print(type(todo.priority))
+    print(todo)
+    #print(todo)
+    #with open(CSV_FILE, mode='a', newline='') as f:
+    #    writer = csv.writer(f)
+    #    writer.writerow([todo_id, todo.title, todo.description, todo.priority, todo.state])
     
-    return {"todo_id": todo_id}
+    #return {"todo_id": todo_id}
+    return {"todo ricevuto correttamente"}
 
 @app.get("/read_todo")
 async def read_todo(payload: TodoID):
