@@ -1,0 +1,9 @@
+curl -v -X POST http://127.0.0.1:8000/add_todo -H "Content-Type: application/json" -d '{"title": "Lesson 1", "description": "Finish API", "priority": 1, "state": "pending"}'
+
+
+curl e' un client http
+-v sta per "verboso", contiene piu' output che ci permette di capire cosa sta succedendo
+-X dice a curl di usare il metodo POST per contattare la url
+http://127.0.0.1:8000/add_todo e' la url che stiamo contattando, qui risponde un server http (uvicorn)
+-H aggiunge un header HTTP 
+-d aggiunge un dato (payload) a quello che curl manda al server http
