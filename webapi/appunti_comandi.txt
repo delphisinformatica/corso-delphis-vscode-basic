@@ -1,3 +1,16 @@
+uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+
+questo e' il comando che lancia il server http uvicorn
+legge dalla cartella dove viene lanciatio il file nel primo pezzo (uvicorn main:)
+dentro a quel file legge la variabile con il nome nel secondo pezzo (uvicorn main:app)
+se trova dentro una classe FastAPI() istanziata parte
+--host gli dice su che IP ascoltare (0.0.0.0 vuol dire "tutti gli IP")
+--port gli dice su che porta ascoltare
+--reload gli dice di rileggere il file con il codice fastapi al volo, mentre lo modificate uvicorn serve il codice modificato
+
+ATTENZIONE: entrate nella cartella con il main.py che contiene il codice di fastapi
+
+
 curl -v -X POST http://127.0.0.1:8000/add_todo -H "Content-Type: application/json" -d '{"title": "Lesson 1", "description": "Finish API", "priority": 1, "state": "pending"}'
 
 
@@ -7,3 +20,7 @@ curl e' un client http
 http://127.0.0.1:8000/add_todo e' la url che stiamo contattando, qui risponde un server http (uvicorn)
 -H aggiunge un header HTTP 
 -d aggiunge un dato (payload) a quello che curl manda al server http
+
+
+
+
