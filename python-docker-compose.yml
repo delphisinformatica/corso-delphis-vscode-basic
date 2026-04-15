@@ -35,6 +35,8 @@ services:
       dockerfile: Dockerfile-python
     volumes:
       - .:/workspace:cached
+    ports:
+    - 8000:8000
     command: sleep infinity
     depends_on:
       - db
